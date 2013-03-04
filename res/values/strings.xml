@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ListViewImagesActivity!</string>
+    <string name="app_name">TODO</string>
+    <string name="DONE">Done</string>
+    <string name="ADD">Add</string>
+    <string name="edit_message">Description</string>
+    <string name="button_send">Create</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_task_list">Todo List</string>
+    <string name="sendNotifi">sendNotifi</string>
+    <string name="get_url">get_url</string>
+    <string name="get_service">get_service</string>
+    <string name="speak">speak</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_voice">title_activity_voice</string>
+    <string name="title_activity_wall">title_activity_wall</string>
+
+</resources>

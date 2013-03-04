@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/colored_smoke" >
+
+    <!-- android:background="@drawable/gradient_box"> -->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/edit_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:hint="Add your task here"
+                android:textColor="#ef0000" />
+
+            <requestFocus />
+
+            <Button
+                android:id="@+id/btnMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/ok_btt" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/microphone_btt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/microphone_btt" />
+
+            <Button
+                android:id="@+id/btnReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/reminder_btt" />
+
+            <Button
+                android:id="@+id/btnGPS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/pin_btt" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/share_btt" />
+
+            <Button
+                android:id="@+id/btnOpt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/gears_btt" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/editAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:textColor="#ef0000"
+                android:visibility="invisible" >
+
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btnAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/ok_btt"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <TextView
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:lines="4"
+            android:maxLines="4"
+            android:visibility="visible" >
+        </TextView>
+    </TableLayout>
+
+</LinearLayout>

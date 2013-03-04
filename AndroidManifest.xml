@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="il.ac.shenkar.todos"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-sdk android:minSdkVersion="9" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:icon="@drawable/myicon"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".Todo"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="il.ac.shenkar.todos.MyWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <activity
+            android:name="il.ac.shenkar.todos.TaskListActivity"
+            android:label="@string/title_activity_task_list" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="il.ac.shenkar.todos.SendEmailActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="il.ac.shenkar.todos.VoiceToString"
+            android:label="@string/title_activity_voice" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="il.ac.shenkar.todos.Wallpaper"
+            android:label="@string/title_activity_wall" >
+            <intent-filter>
+                <action android:name="android.intent.action.WALL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="il.ac.shenkar.todos.service.MyResultReceiver" />
+
+        <receiver android:name="il.ac.shenkar.todos.BroadCast.ReminderBroadCastReceiver" >
+            <intent-filter>
+                <action android:name="il.ac.shenkar.todos.BroadCast" >
+                    <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="il.ac.shenkar.todo.ProximityAlert" />
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <service android:name="il.ac.shenkar.todos.service.UrlService" />
+        <service android:name="il.ac.shenkar.todos.service.GPSDataCollectorService" />
+
+        <!-- You must insert your own Google Maps for Android API v2 key in here. -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBukrZU037k1qjuT-RPBUgbiOePOq0Keco" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+
+</manifest>
